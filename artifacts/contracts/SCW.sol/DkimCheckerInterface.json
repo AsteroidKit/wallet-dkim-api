@@ -1,0 +1,45 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "DkimCheckerInterface",
+  "sourceName": "contracts/SCW.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_selector",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_domain",
+          "type": "string"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_sig",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_canonicalizedHeader",
+          "type": "bytes"
+        }
+      ],
+      "name": "verifyRSASHA256",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

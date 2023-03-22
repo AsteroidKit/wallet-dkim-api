@@ -1,0 +1,405 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/rjborba/git/wallet-dkim-api/contracts/DkimChecker.sol": {
+      "lastModificationDate": 1679452652750,
+      "contentHash": "0bf217448a8e3d48d58705952f08b48f",
+      "sourceName": "contracts/DkimChecker.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./algorithms/BytesUtils.sol",
+        "./algorithms/RSA.sol",
+        "./algorithms/ED25519.sol",
+        "./algorithms/SHA1.sol",
+        "./algorithms/SHA512.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "0.8.0"
+      ],
+      "artifacts": [
+        "DkimChecker"
+      ]
+    },
+    "/Users/rjborba/git/wallet-dkim-api/contracts/algorithms/SHA512.sol": {
+      "lastModificationDate": 1679452314053,
+      "contentHash": "91738ce68fcc4659f492c24da8f31c81",
+      "sourceName": "contracts/algorithms/SHA512.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ED25519.sol"
+      ],
+      "versionPragmas": [
+        "0.8.0"
+      ],
+      "artifacts": [
+        "SHA512"
+      ]
+    },
+    "/Users/rjborba/git/wallet-dkim-api/contracts/algorithms/RSA.sol": {
+      "lastModificationDate": 1679452371519,
+      "contentHash": "98114cdf8492ca4471c7786f7fbdc687",
+      "sourceName": "contracts/algorithms/RSA.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@ensdomains/buffer/contracts/Buffer.sol"
+      ],
+      "versionPragmas": [
+        ">0.4.23"
+      ],
+      "artifacts": [
+        "RSA"
+      ]
+    },
+    "/Users/rjborba/git/wallet-dkim-api/contracts/algorithms/BytesUtils.sol": {
+      "lastModificationDate": 1679452585439,
+      "contentHash": "d4572b66d3ad052f84885e79bac8be17",
+      "sourceName": "contracts/algorithms/BytesUtils.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">0.4.23"
+      ],
+      "artifacts": [
+        "BytesUtils"
+      ]
+    },
+    "/Users/rjborba/git/wallet-dkim-api/contracts/algorithms/ED25519.sol": {
+      "lastModificationDate": 1679452350849,
+      "contentHash": "e99b3e2c06d140cc3492d97ef5deb942",
+      "sourceName": "contracts/algorithms/ED25519.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ED25519"
+      ]
+    },
+    "/Users/rjborba/git/wallet-dkim-api/contracts/algorithms/SHA1.sol": {
+      "lastModificationDate": 1679452378753,
+      "contentHash": "f40ca37e362914d1e4810062c1219c9c",
+      "sourceName": "contracts/algorithms/SHA1.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">0.4.18"
+      ],
+      "artifacts": [
+        "SHA1"
+      ]
+    },
+    "/Users/rjborba/git/wallet-dkim-api/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1679452051260,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/rjborba/git/wallet-dkim-api/node_modules/@ensdomains/buffer/contracts/Buffer.sol": {
+      "lastModificationDate": 1679426602741,
+      "contentHash": "0067ca8f8500a79287649da1b95b8226",
+      "sourceName": "@ensdomains/buffer/contracts/Buffer.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">0.4.18"
+      ],
+      "artifacts": [
+        "Buffer"
+      ]
+    },
+    "/Users/rjborba/git/wallet-dkim-api/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1679452051238,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/rjborba/git/wallet-dkim-api/contracts/Migrations.sol": {
+      "lastModificationDate": 1679452229990,
+      "contentHash": "2f0445f46d29e485bc82e35c1c7e8d1e",
+      "sourceName": "contracts/Migrations.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.0"
+      ],
+      "artifacts": [
+        "Migrations"
+      ]
+    },
+    "/Users/rjborba/git/wallet-dkim-api/contracts/SCW.sol": {
+      "lastModificationDate": 1679452634898,
+      "contentHash": "ca2a3f79c35ae4ffe224e8dbbef73f7f",
+      "sourceName": "contracts/SCW.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.0"
+      ],
+      "artifacts": [
+        "DkimCheckerInterface",
+        "SCW",
+        "SCWDeployer"
+      ]
+    }
+  }
+}
