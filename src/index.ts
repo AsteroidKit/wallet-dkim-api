@@ -40,6 +40,10 @@ startEmailListening((mail, seqno, attrs, raw) => {
   setDkimKeyAndVerifyEmail(raw);
 });
 
+app.get("/", (req, resp) => {
+  resp.send("Hello world");
+});
+
 app.post("/startAuth", upload.none(), startAuth);
 
 app.post("/verifyEmail", upload.single("emailFile"), verifyEmail);

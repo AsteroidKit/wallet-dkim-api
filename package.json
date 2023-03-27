@@ -12,11 +12,6 @@
   },
   "author": "Rodrigo José Borba Fernandes",
   "license": "ISC",
-  "pre-commit": [
-    "ts.check",
-    "build",
-    "add-build"
-  ],
   "devDependencies": {
     "@ensdomains/buffer": "0.0.10",
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",
