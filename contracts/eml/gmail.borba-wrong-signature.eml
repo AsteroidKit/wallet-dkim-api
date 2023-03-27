@@ -1,0 +1,165 @@
+Received: from CP5P284MB1744.BRAP284.PROD.OUTLOOK.COM (2603:10d6:103:f5::10)
+ by CPYP284MB0997.BRAP284.PROD.OUTLOOK.COM with HTTPS; Tue, 14 Mar 2023
+ 15:52:18 +0000
+Received: from DB6PR07CA0173.eurprd07.prod.outlook.com (2603:10a6:6:43::27) by
+ CP5P284MB1744.BRAP284.PROD.OUTLOOK.COM (2603:10d6:103:f5::10) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6178.26; Tue, 14 Mar 2023 15:52:17 +0000
+Received: from DB5EUR01FT062.eop-EUR01.prod.protection.outlook.com
+ (2603:10a6:6:43:cafe::f1) by DB6PR07CA0173.outlook.office365.com
+ (2603:10a6:6:43::27) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.6178.25 via Frontend
+ Transport; Tue, 14 Mar 2023 15:52:15 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.167.174)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.167.174 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.167.174; helo=mail-oi1-f174.google.com; pr=C
+Received: from mail-oi1-f174.google.com (209.85.167.174) by
+ DB5EUR01FT062.mail.protection.outlook.com (10.152.5.167) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.6178.24 via Frontend Transport; Tue, 14 Mar 2023 15:52:15 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:62BD3305A759ABBB0A20A73A3BB07BF2652614E2AE69C3876761C228BA1A47C9;UpperCasedChecksum:FB34D425D867EF4908AB31C6CC9F9441C09AB27948718B842CB6A6E8565F79FD;SizeAsReceived:2696;Count:16
+Received: by mail-oi1-f174.google.com with SMTP id bx36so509243oib.7
+        for <rjborba@live.com>; Tue, 14 Mar 2023 08:52:15 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112; t=1678809135;
+        h=mime-version:subject:message-id:to:from:date:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=7JKHNmTDHVFzz+ck4tR8z3+kY0ht08VCaAXvOgSwtqI=;
+        b=idHxJqDVZ7l56haoIAfsDyW4u1HH8Dl59lxPFmtvLCM0gqbrbo/eZw5N7bG1d/qVii
+         2Kkd2GnSTZeUKBTLYRqI61wmxSM2a1RzcjS25JJ3kunD/myYxP5JZTD60Uz1Rtew2w4a
+         4dAEMreZb0Ydwn6uF5AROfzGWqFkLj0zVy3W+l3hJWpSGxCg4fT/OoZ4wf1U4iDzi0gt
+         RVAoPO/Rge/P74cSgPktxDifLSJ5+BVrUGMRkUjhxZEB13rodH8U8ajRyJnmoHH4hKHY
+         T4XOG5Fng87PVU93aSFUNW8HoOH/y2wO1OxAMP+s9Zh4KWwXPOlH5zlNpZ3d6f81/Irx
+         LoQq==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112; t=1678809135;
+        h=mime-version:subject:message-id:to:from:date:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=7JKHNmTDHVFzz+ck4tR8z3+kY0ht08VCaAXvOgSwtqI=;
+        b=oxlA9JyWEpNqIJ0MBdXogKfnZlraB4k1Ctxzumc2nmP7CJIxWfqEZb+KCPFWOdUkc4
+         mgNF79cZKB62HFWZcKZaKw0PecaLHUy/WpClf4l//G00yDGnUXIlv26NtyCmlttU94wM
+         CF8FgB3iGfGOO8sc+MA/xuIcw+nKB7sgSE4oTb7ZybemH8cGxBK7MTBx2Yt8XqNQ7lI0
+         b+E2Qdt7WhwL1+r3Y6eL+n2QQheSVsuRcoc3+J/5FqzPCsJzf3hI4GBjjBhYSafNRdbc
+         DOvu5abNkszPjXDVhVqMpV9qLMUG095NZKyIrS/bg5F2bd88MFnSITZukgxYnpZgOZ2d
+         Watw==
+X-Gm-Message-State: AO0yUKW/cAIlgMdL+p6qsFB9VUOFXqCPD5qDsVPJdEtII8qbjo9Yebn7
+	bwJ2AeepaEm77V9f0VyTXkb2CNq6ceg=
+X-Google-Smtp-Source: AK7set8LTBQEghpyLThP+2MoHLmLZgqkw13taZ0HV/U94xA5/nFXOk0qrOZ9Uek09azoGm9zf/Z92Q==
+X-Received: by 2002:a05:6808:8ef:b0:383:bdef:6589 with SMTP id d15-20020a05680808ef00b00383bdef6589mr17696933oic.56.1678809134712;
+        Tue, 14 Mar 2023 08:52:14 -0700 (PDT)
+Return-Path: rodrigoj.borba@gmail.com
+Received: from [10.0.0.102] ([187.19.234.118])
+        by smtp.gmail.com with ESMTPSA id t3-20020a05687044c300b001762ce27f9asm1204444oai.23.2023.03.14.08.52.13
+        for <rjborba@live.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 14 Mar 2023 08:52:14 -0700 (PDT)
+Date: Tue, 14 Mar 2023 12:52:05 -0300
+From: Rodrigo Borba <rodrigoj.borba@gmail.com>
+To: =?utf-8?Q?Rodrigo_Jos=C3=A9_Borba_Fernandes?= <rjborba@live.com>
+Message-ID: <c3058e84-0335-488c-a71b-2c033aeaa9f2@Spark>
+Subject: DKIM TEST - SUBJECT
+X-Readdle-Message-ID: c3058e84-0335-488c-a71b-2c033aeaa9f2@Spark
+Content-Type: multipart/alternative; boundary="6410982a_19495cff_8095"
+X-IncomingHeaderCount: 16
+X-MS-Exchange-Organization-ExpirationStartTime: 14 Mar 2023 15:52:15.6490
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 95c1370e-c585-42d0-2aa7-08db24a41578
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DB5EUR01FT062:EE_|CP5P284MB1744:EE_
+X-MS-Exchange-Organization-AuthSource:
+ DB5EUR01FT062.eop-EUR01.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 3/14/2023 3:51:32 PM
+X-MS-Office365-Filtering-Correlation-Id: 95c1370e-c585-42d0-2aa7-08db24a41578
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 209.85.167.174
+X-SID-PRA: RODRIGOJ.BORBA@GMAIL.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: BCL:0;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 14 Mar 2023 15:52:15.6260
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 95c1370e-c585-42d0-2aa7-08db24a41578
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ DB5EUR01FT062.eop-EUR01.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CP5P284MB1744
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.6931093
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.6178.026
+X-Microsoft-Antispam-Mailbox-Delivery:
+	abwl:0;wl:0;pcwl:0;kl:0;dwl:0;dkl:0;rwl:0;ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000305)(90000117)(90010023)(91010020)(91040095)(9050020)(9100338)(4810007)(4910033)(8820095)(9575002)(10195002)(9320005);
+X-Message-Info:
+	qZelhIiYnPlwJ54mNTO529MOg2v9IZOdQji9FQ4SM+TeOVhr+D/m4ZWQVyX1rG6hN2bR9Nr1QrYJ45ixEm3ZVCiX3UfCLuB2tQzoVzCWX/vSdpTGrDPihvIsz5Z+s4PPoIFl6ZyMxtjlU2rCuyxHmCuwj/Ifjut9lcvGM4b4jweZ2QhDeXfsPd8jF3H+XCHiFLnYCREGCncq+9rODNcNjg==
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0z
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?TkxmSk9Jc2VGTXc3QVVhcjJFN3V3dlkvODJDdW9tRU81MFREbGNyYW5Cck9Y?=
+ =?utf-8?B?dU1sc1FkdXIzRFM2WTBRd3pYMmZRcFZzcTZVN3I1eXBCeWowN25RYUo0M0sx?=
+ =?utf-8?B?Nm1KZS9TYkkxRGU4b2Mwc2hhYm5iNEE3eW1ody9zZGpERHZpZ1VxWkJwWXow?=
+ =?utf-8?B?TnZtNVlaMncrdjk0M0MwL3pBOWVqL0hRQ0lGM0JuK3k4Y3hyZVNYMEVXcmg5?=
+ =?utf-8?B?RzNSL3NYcjBQckl0bTRoYVYxa3BQb2x5aGJxSU5iOWwzZGdVY2JPTldDeEUz?=
+ =?utf-8?B?Vi9ScUI4cU5Bay9YenppUHRlamtJZnY1Q1NqZGNzd2pOZTl6OExzYmVzQ2lh?=
+ =?utf-8?B?YTJoZjh3d0ZXWStGaEZLMkJSc2NxaXc1RXlPdlZXTWo3NzRFV2ZOV2Nub1Z1?=
+ =?utf-8?B?YnNpZDM0ZnpFZFBNcUVId05WeEdaUnBzR21sYzVQdjZsaVBxeXVmRUU3b2ZW?=
+ =?utf-8?B?MUR6Uk1COXhWakY2QkNTUUpNdDVnNTdoZHVKQWJacWIzN1ptNjQwc1FmaWRM?=
+ =?utf-8?B?d3ZHYUkxSzRVRE5JQnRBNjNvSXZudmlKTjdhR1grQUhNYWRDaXErMitDd0Fm?=
+ =?utf-8?B?MWM3Rk1HRXJCUk1ta0NrRVZUZVpXVlRGcVA1aThTejF0MWZOZmtNYzhOcVpp?=
+ =?utf-8?B?eDdaeG85QWRTSi91Y21Ldi9Ya0k5UXlxVmZ5Q0Rvd3ExNXZnMlg5bXR6Mm02?=
+ =?utf-8?B?a3JxUytnSzlBeklMbmRMZGNGWVdIeWh0OUk3UUoxYXFIdVVHem00Y1d3cnR1?=
+ =?utf-8?B?eUluYnYvbXFzY2Z5QXBQQkFPOUhaeEhoM1hoSnllQ1R4VHNJRDNPd3FMa3ZQ?=
+ =?utf-8?B?aTk2ZU9BREt1MUVseDlKVjdhYktOTC82TkNNUk83aTJDQ1FBL1BGNEJFRGFu?=
+ =?utf-8?B?RktrZzM5dXUxWVh6dGhJdU41bHNPNENBSGo4MUJnZTNKVlRMUWp6dlpyZ1k5?=
+ =?utf-8?B?cXBab1FvV090WmthYnpnRWJ1MFlySEZ4aW5LYXZCZUROVUFlODV6ellZL3pI?=
+ =?utf-8?B?WTBoTFY3bVVVc3NaM2k4SEhieS8wbFBSOXBvMjZ0dDh4OHIzcGtGZ3pBaGQx?=
+ =?utf-8?B?VGRyZEhGZE1XQjl4dzBJblZUT3lJTjVKc2wyOVhEZnNnVGQzVFNpbjZWT2tF?=
+ =?utf-8?B?UUJoYyt1VTBvNFU5Vk5wQXpENTNpc1U3OGZYb3ZCWUZOV09XaC9MRDZqK1Jt?=
+ =?utf-8?B?eTI0TGZvODRHNWRnM2VTeHMvVC8xRkN1bDRUWS9EbHhiMkkyV252a1lVOE4r?=
+ =?utf-8?B?d3pYZVV0aHZ0TGpvUnd2UW91MFZuSFRaR2RQR3A2NVRTVUJKaFZ3Si9GTnNj?=
+ =?utf-8?B?cDBvRFJ4aWhBT3V0ZW1wMFJMRmhCM2gyTSt3R0NiSnE4RkhWaDViWnV2MTdq?=
+ =?utf-8?B?ejF4K3daSm9QNEZvUnQvL1dQZVZhN2lWdEdDWm55eGVJWmR4Q0dsaVJQTHZs?=
+ =?utf-8?B?R29SRC9jY0FZamh0cHg5TEpvcG1kcitwMXVwcEdDVC9DdDVDNUh4M1h0bGlZ?=
+ =?utf-8?B?YnY1aE5jL1Zqak9WVHl5RWxJMVBPcjcxOVpZenlJY29IMWNOam44ZGlSVVBv?=
+ =?utf-8?B?Mk9sdW9TczBjOHUxZUZJNlRadzVubFZqTnpzOFBob2MzcFNueVdERCtBVGpy?=
+ =?utf-8?B?aWlKb2FrWThCc3V6ZWlxSitnQmVNaUE9PQ==?=
+MIME-Version: 1.0
+
+--6410982a_19495cff_8095
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
+This is a DKIM test
+
+--6410982a_19495cff_8095
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"><t=
+itle></title>
+</head>
+<body>
+<div name=3D"messageBodySection">
+<div dir=3D"auto">This is a DKIM test</div>
+</div>
+</body>
+</html>
+
+--6410982a_19495cff_8095--
