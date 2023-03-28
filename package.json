@@ -5,8 +5,8 @@
   "main": "./src/index.ts",
   "scripts": {
     "dev": "nodemon",
-    "prod": "node ./dist/src/",
-    "build": "rimraf build && tsc",
+    "start": "npm run build && node build/index.js",
+    "build": "rimraf ./build && tsc",
     "tsc": "tsc --project tsconfig.json",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add build",
