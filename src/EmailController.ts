@@ -36,6 +36,7 @@ export const startEmailListening = (
 
   mailListener.on("server:connected", function () {
     console.log("IMAP Connected");
+    console.log("Email Address: " + process.env.EMAIL_USERNAME);
   });
 
   mailListener.on("server:disconnected", function () {

@@ -18859,10 +18859,16 @@
       "links": {},
       "address": "0x97B79bcAE1C7C08b1aEF2a92D0F174f8DAf7C463",
       "transactionHash": "0xe543f9de211484e96d43065b3580892d00caca74cd6001063f15fe3e0f727d0f"
+    },
+    "80001": {
+      "events": {},
+      "links": {},
+      "address": "0xa546Ca066FaB3920e2a08ec614E12A325aa02D55",
+      "transactionHash": "0x40ddf75d1975749731de545239a53aa59e799fe747ac0f184acba38d0e16c24d"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2023-03-27T16:44:40.730Z",
+  "updatedAt": "2023-03-28T16:56:48.729Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

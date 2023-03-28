@@ -15960,10 +15960,43 @@
       "links": {},
       "address": "0x3e3639Fb89B696De66AE1160fD261ED8d7Beb3F0",
       "transactionHash": "0x2d2e11f6a89e8af9faa02565aa9f1ca41d714bd46705ddbc43b72d4a407b4e51"
+    },
+    "80001": {
+      "events": {
+        "0xf6d7d8f638af86edbd3db0363022953a79197e2b970840dd72ca38b9b4ada892": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "bytes32",
+              "name": "x",
+              "type": "bytes32"
+            }
+          ],
+          "name": "Debug",
+          "type": "event"
+        },
+        "0xff3010ae5fe3144d9922cf3389b9bf30da6f991746f58a3177e3427ff9c7ef54": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ],
+          "name": "ReturnVal",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xcdBCf604C6982854Cd7363661f7514b9DDF0eB81",
+      "transactionHash": "0x747c53766d2a89fbd14e194c9e8a4bf9d66ebd4b4abd739af6bdc7d53bc65303"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2023-03-27T16:44:40.721Z",
+  "updatedAt": "2023-03-28T16:56:48.715Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

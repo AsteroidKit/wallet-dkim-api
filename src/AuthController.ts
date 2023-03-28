@@ -4,6 +4,7 @@ import { sendEmail, setDkimKeyAndVerifyEmail } from "./EmailController";
 import { scwDeployerInstance } from "./ContractController";
 
 export const startAuth = async (req, res) => {
+  console.log("startAuth called");
   const nonce = randomString(10);
   const email = req.body.email;
 
@@ -23,6 +24,7 @@ export const startAuth = async (req, res) => {
 };
 
 export const verifyEmail = async (req, res) => {
+  console.log("VerifyEmail called");
   const emailFile = req.file;
 
   if (!emailFile) {
@@ -36,6 +38,7 @@ export const verifyEmail = async (req, res) => {
 };
 
 export const completeAuth = async (req, res) => {
+  console.log("CompleteAuth called");
   const email = req.body.email;
   const ownerPublicKey = req.body.ownerPublicKey;
 
@@ -61,6 +64,7 @@ export const completeAuth = async (req, res) => {
 };
 
 export const getSCWAddressByEmail = async (req, res) => {
+  console.log("getSCWAddressByEmail called");
   const userEmail = req.params.email;
 
   if (!userEmail) {
@@ -77,6 +81,7 @@ export const getSCWAddressByEmail = async (req, res) => {
 };
 
 export const isEmailVerified = async (req, res) => {
+  console.log("isEmailVerified called");
   const userEmail = req.params.email;
 
   if (!userEmail) {
