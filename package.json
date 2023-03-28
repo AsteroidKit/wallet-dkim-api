@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "prod": "node ./dist/src/",
-    "build": "rimraf build && tsc",
+    "build": "rm -rf build && tsc",
     "tsc": "tsc --project tsconfig.json",
     "ts.check": "tsc --project tsconfig.json",
     "add-build": "git add build",
