@@ -54,12 +54,15 @@ export const completeAuth = async (req, res) => {
     throw new Error("Missing owner public key");
   }
 
-  await scwDeployerInstance.completeAuth(email, ownerPublicKey);
+  const tx = await scwDeployerInstance.completeAuth(email, ownerPublicKey);
+  await tx.wait();
+
+  const scwAddress = await waitForSCWAddress(email);
 
   res.json({
     success: true,
     message: "authenticated",
-    data: { ownerKey: ownerPublicKey },
+    data: { ownerKey: ownerPublicKey, scwAddress },
   });
 };
 
@@ -97,4 +100,23 @@ export const isEmailVerified = async (req, res) => {
       isEmailVerified,
     },
   });
+};
+
+const waitForSCWAddress = async (email: string): Promise<string> => {
+  let count = 0;
+
+  const doLoop = async () => {
+    const scwAddress = await scwDeployerInstance.getSCWAddressByEmail(email);
+    count++;
+
+    if (!scwAddress) {
+      doLoop();
+    } else if (count > 20) {
+      throw new Error("Timeout on waitForSCWAddress");
+    } else {
+      return scwAddress;
+    }
+  };
+
+  return doLoop();
 };

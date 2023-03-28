@@ -67,6 +67,7 @@ export const sendEmail = async (userEmail: string, nonce: string) => {
   };
 
   await transporter.sendMail(mailOptions);
+  console.log("Email sent to: " + userEmail);
 };
 
 export const setDkimKeyAndVerifyEmail = async (email: string) => {
